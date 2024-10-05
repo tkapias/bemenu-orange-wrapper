@@ -15,6 +15,34 @@
 #
 #########################
 
+# using 3 fonts for mono, emokis and nerd-fonts
+pango_fonts="Noto Color Emoji Regular 12, \
+  Symbols Nerd Font Mono Regular 12, \
+  IBM Plex Mono Regular 12"
+
+# colors
+trans="DF"
+c_accent="#F45100"
+c_bg="#2B303B"
+c_bg_sel="#D43100"
+c_bg_alt="#1B202B"
+c_fg="#EAEAEA"
+c_fg_sel="#303030"
+c_fg_alt="#303549"
+
+# coloring
+fg_border="$c_accent"
+bg_fg_title=(    "$c_accent"         "$c_fg_alt"    )
+bg_fg_filter=(   "$c_bg"             "$c_fg"        )
+bg_fg_cursor=(   "$c_bg"             "${c_fg}$trans")
+bg_fg_normal=(   "${c_bg}$trans"     "$c_fg"        )
+bg_fg_highlight=("$c_accent"         "$c_fg_alt"    )
+bg_fg_feedback=( "$c_fg_alt"         "$c_accent"    )
+bg_fg_selected=( "$c_bg_sel"         "$c_fg_sel"    )
+bg_fg_alterning=("$c_bg_alt"         "$c_fg"        )
+bg_fg_scrollbar=("${c_bg_alt}$trans" "${c_fg}$trans")
+
+# global bemenu command location
 if PATH=/usr/bin:/usr/local/bin command -v bemenu 1> /dev/null; then
   bemenu_cmd=$(PATH=/usr/bin:/usr/local/bin command -v bemenu)
 else
@@ -22,21 +50,7 @@ else
   exit 1
 fi
 
-pango_fonts="Noto Color Emoji Regular 12, \
-  Symbols Nerd Font Mono Regular 12, \
-  IBM Plex Mono Regular 12"
-
-fg_border="#F45100"
-bg_fg_title=(    "#F45100"   "#303549")
-bg_fg_filter=(   "#2B303B"   "#EAEAEA")
-bg_fg_cursor=(   "#2B303B"   "#EAEAEA99")
-bg_fg_normal=(   "#2B303BDF" "#EAEAEA")
-bg_fg_highlight=("#F45100"   "#303549")
-bg_fg_feedback=( "#303549"   "#F45100")
-bg_fg_selected=( "#D43100"   "#303030")
-bg_fg_alterning=("#1B202B"   "#EAEAEA")
-bg_fg_scrollbar=("#1B202BDF" "#EAEAEACF")
-
+# other options
 bemenu_args=(--binding vim \
     --vim-esc-exits \
     --ignorecase \
@@ -61,6 +75,7 @@ bemenu_args=(--binding vim \
     --ab  "${bg_fg_alterning[0]}" --af  "${bg_fg_alterning[1]}" \
     --scb "${bg_fg_scrollbar[0]}" --scf "${bg_fg_scrollbar[1]}")
 
+# mostly in case of --help or --version
 if [ -p /dev/stdin ]; then
   cat | "$bemenu_cmd" "${bemenu_args[@]}" "$@"
 else
