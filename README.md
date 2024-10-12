@@ -39,6 +39,7 @@ To change some options, just edit the script.
 
 - [bemenu-mpdcli](https://github.com/tkapias/bemenu-mpdcli): bemenu client for MPD using mpc.
 - [bemenu-qalc](https://github.com/tkapias/bemenu-qalc): bemenu calculator using qalc.
+- [bemenu-desktop-menu](https://github.com/tkapias/bemenu-desktop-menu): bemenu desktop applications launcher.
 - [bemenu-nb-todo](https://github.com/tkapias/bemenu-nb-todo): bemenu todo & task management for nb.
 - [bemoji](https://github.com/marty-oehme/bemoji): Emoji/NerdFonts/Math character picker with favorites.
 - [i3-scratchmenu](https://github.com/aedoq/i3-scratchmenu): list/toggle i3wm scratchpads.
