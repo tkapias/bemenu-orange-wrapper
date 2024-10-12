@@ -34,3 +34,12 @@ ln -s $PWD/bemenu-orange-wrapper.sh $HOME/.local/bin/bemenu
 Just symlink the wrapper script as bemenu in your user bin path, it should be used by default by other bemenu tools.
 
 To change some options, just edit the script.
+
+## Suggestions
+
+- [bemenu-mpdcli](https://github.com/tkapias/bemenu-mpdcli): bemenu client for MPD using mpc.
+- [bemenu-qalc](https://github.com/tkapias/bemenu-qalc): bemenu calculator using qalc.
+- [bemenu-nb-todo](https://github.com/tkapias/bemenu-nb-todo): bemenu todo & task management for nb.
+- [bemoji](https://github.com/marty-oehme/bemoji): Emoji/NerdFonts/Math character picker with favorites.
+- [i3-scratchmenu](https://github.com/aedoq/i3-scratchmenu): list/toggle i3wm scratchpads.
+
