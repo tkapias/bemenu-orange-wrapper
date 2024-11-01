@@ -73,10 +73,12 @@ bemenu_args=(--binding vim
 	--scb "${bg_fg_scrollbar[0]}" --scf "${bg_fg_scrollbar[1]}")
 
 # mostly in case of --help or --version
-if [ -p /dev/stdin ]; then
+if [[ -p /dev/stdin ]]; then
 	cat | "$bemenu_cmd" "${bemenu_args[@]}" "$@"
+elif [[ -n "$1" ]]; then
+	"$bemenu_cmd" "${bemenu_args[@]}" "$@"
 else
-	printf %s 'No Input' | "$bemenu_cmd" "${bemenu_args[@]}" "$@"
+	printf %s 'No Input' | "$bemenu_cmd" "${bemenu_args[@]}"
 fi
 
 
