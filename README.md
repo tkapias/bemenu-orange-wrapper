@@ -29,18 +29,18 @@ sudo make install
 sudo ldconfig
 
 # Nerd Fonts Symbols only
-wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/NerdFontsSymbolsOnly.tar.xz
-sudo cp SymbolsNerdFont*-Regular.ttf /usr/local/share/fonts/
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/NerdFontsSymbolsOnly.tar.xz
 sudo tar -xvf NerdFontsSymbolsOnly.tar.xz --wildcards --no-anchored '*.ttf' --directory=/usr/local/share/fonts/
-fc-cache -f
+sudo cp SymbolsNerdFont*-Regular.ttf /usr/local/share/fonts/
 
 # Noto Color Emoji
 sudo apt install fonts-noto-color-emoji
 
 # IBM Plex Mono
-wget https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-mono%401.0.0/ibm-plex-mono.zip
+wget https://github.com/IBM/plex/releases/download/%40ibm%2Fplex-mono%401.1.0/ibm-plex-mono.zip
 sudo mkdir -p /usr/local/share/fonts/IBM-Plex-Mono
 sudo unzip -j ibm-plex-mono.zip -d /usr/local/share/fonts/IBM-Plex-Mono/ ibm-plex-mono/fonts/complete/otf/*.otf
+fc-cache -f
 ```
 
 ### bemenu-orange-wrapper
