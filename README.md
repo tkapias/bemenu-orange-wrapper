@@ -22,6 +22,8 @@ A bash wrapper script for [bemenu](https://github.com/Cloudef/bemenu) with a sim
 # bemenu
 git clone --depth=1 https://github.com/Cloudef/bemenu bemenu
 cd bemenu
+sudo apt install scdoc libcairo-dev libpango1.0-dev libxkbcommon-dev
+# buiding for x11
 make clients x11 curses doxygen PREFIX=/usr/local
 sudo make install
 sudo ldconfig
